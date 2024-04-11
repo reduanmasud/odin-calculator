@@ -5,9 +5,7 @@ const CALCULATE = {
     div: (a, b) => (b == 0 ? "ERROE" : a / b),
 };
 
-let operand1;
-let operand2;
+let operand;
 let operator;
-let result;
 
 
