@@ -31,4 +31,6 @@ const BTN = {
     percent : () => document.querySelector('#percent')
 }
 
+const DISPLAY = document.querySelector('#calc-typed');
+
 
