@@ -88,6 +88,19 @@ BTN.equal().addEventListener('click', ()=> {
     }
 })
 
+BTN.percent().addEventListener('click', () => {
+    if(operator == null)
+    {
+        operand /= 100;
+        DISPLAY.innerHTML = operand;
+    }
+    else 
+    {
+        operand_2 /= 100;
+        DISPLAY.innerHTML = operand_2;
+    }
+})
+
 BTN.back().addEventListener("click", ()=>{
     operand /= 10;
     DISPLAY.innerHTML = parseInt(operand);
@@ -127,5 +140,4 @@ BTN.plus_minus().addEventListener('click', () => {
         DISPLAY.innerHTML = operand_2;
     }
 
-    
 })
