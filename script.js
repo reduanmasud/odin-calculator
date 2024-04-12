@@ -10,11 +10,12 @@ const CALCULATE = {
     div: (a, b) => {
         if(b == 0) 
         {
-            DISPLAY.innerHTML = "Math Error";
             operand = 0;
             operand_2 = 0;
             operator = null;
-            return ;
+
+            return "Math Error";
+            
         }
 
         return a / b;
