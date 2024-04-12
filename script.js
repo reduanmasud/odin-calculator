@@ -1,13 +1,26 @@
+let operand = 0;
+let operand_2 = 0;
+let operator = null;
+
+
 const CALCULATE = {
     sum: (a, b) => a + b,
     sub: (a, b) => a - b,
     prod: (a, b) => a * b,
-    div: (a, b) => (b == 0 ? "ERROE" : a / b),
-};
+    div: (a, b) => {
+        if(b == 0) 
+        {
+            DISPLAY.innerHTML = "Math Error";
+            operand = 0;
+            operand_2 = 0;
+            operator = null;
+            return ;
+        }
 
-let operand = 0;
-let operand_2 = 0;
-let operator = null;
+        return a / b;
+
+    },
+};
 
 const BTN = {
     zero : () => document.querySelector('#zero'),
@@ -54,30 +67,28 @@ function display(element)
 }
 
 BTN.equal().addEventListener('click', ()=> {
+
     switch (operator) {
         case "+":
             operand = CALCULATE.sum(operand, operand_2);
             DISPLAY.innerHTML = operand;
             break;
         case "-":
-            
+            operand = CALCULATE.sub(operand, operand_2);
+            DISPLAY.innerHTML = operand;
             break;
         case "*":
-            
+            operand = CALCULATE.prod(operand, operand_2);
+            DISPLAY.innerHTML = operand;
             break;
         case "/":
-            
+            operand = CALCULATE.div(operand, operand_2);
+            DISPLAY.innerHTML = operand;
             break;
         default:
             break;
             
     }
-
-    if(operator != null)
-    {
-        DISPLAY.innerHTML = operand;
-    }
-
 })
 
 BTN.back().addEventListener("click", ()=>{
