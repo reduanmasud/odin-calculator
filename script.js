@@ -87,6 +87,7 @@ BTN.equal().addEventListener('click', ()=> {
 
     operand = "";
     operand_2 = "";
+    dot_flag = false;
     operator = null;
 })
 
