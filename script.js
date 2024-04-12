@@ -61,10 +61,6 @@ function display(element)
     }
 }
 
-function clearAll()
-{
-    
-}
 
 BTN.equal().addEventListener('click', ()=> {
 
@@ -105,13 +101,25 @@ BTN.percent().addEventListener('click', () => {
 })
 
 BTN.back().addEventListener("click", ()=>{
-    operand /= 10;
-    DISPLAY.innerHTML = parseInt(operand);
+
+   if(operator === null)
+   {
+        operand = operand.replace(/.$/,'');
+        if(operand === "") DISPLAY.innerHTML = 0;
+        else DISPLAY.innerHTML = operand;
+   }
+   else 
+   {
+        operand_2 = operand_2.replace(/.$/,'');
+        if(operand_2 === "") DISPLAY.innerHTML = 0;
+        else DISPLAY.innerHTML = operand_2;
+   }
 })
 
 BTN.ac().addEventListener("click", () => {
     operator = null;
-    operand = 0;
+    operand = "";
+    operand = "";
     DISPLAY.innerHTML = 0;
 })
 
