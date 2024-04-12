@@ -52,3 +52,58 @@ function display(element)
     }
     
 }
+
+BTN.equal().addEventListener('click', ()=> {
+    switch (operator) {
+        case "+":
+            operand = CALCULATE.sum(operand, operand_2);
+            DISPLAY.innerHTML = operand;
+            break;
+        case "-":
+            
+            break;
+        case "*":
+            
+            break;
+        case "/":
+            
+            break;
+        default:
+            break;
+            
+    }
+
+    if(operator != null)
+    {
+        DISPLAY.innerHTML = operand;
+    }
+
+})
+
+BTN.back().addEventListener("click", ()=>{
+    operand /= 10;
+    DISPLAY.innerHTML = parseInt(operand);
+})
+
+BTN.ac().addEventListener("click", () => {
+    operator = null;
+    operand = 0;
+    DISPLAY.innerHTML = 0;
+})
+
+BTN.plus().addEventListener('click', () => {
+    operator = "+";
+    operand_2 = 0;
+})
+BTN.minus().addEventListener('click', () => {
+    operator = "-";
+    operand_2 = 0;
+})
+BTN.multiply().addEventListener('click', () => {
+    operator = "*";
+    operand_2 = 0;
+})
+BTN.div().addEventListener('click', () => {
+    operator = "/";
+    operand_2 = 0;
+})
