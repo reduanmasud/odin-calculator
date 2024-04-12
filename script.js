@@ -116,6 +116,16 @@ BTN.div().addEventListener('click', () => {
     operand_2 = 0;
 })
 BTN.plus_minus().addEventListener('click', () => {
-    operand = parseInt(operand) * -1;
-    DISPLAY.innerHTML = operand;
+    if(operator == null)
+    {
+        operand = parseInt(operand) * -1;
+        DISPLAY.innerHTML = operand;
+    }
+    else
+    {
+        operand_2 = parseInt(operand_2) * -1
+        DISPLAY.innerHTML = operand_2;
+    }
+
+    
 })
