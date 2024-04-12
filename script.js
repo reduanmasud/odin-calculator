@@ -4,24 +4,22 @@ let operator = null;
 let dot_flag = false;
 
 const CALCULATE = {
-    sum: (a, b) => a + b,
-    sub: (a, b) => a - b,
-    prod: (a, b) => a * b,
+    sum: (a, b) => parseFloat(a) + parseFloat(b),
+    sub: (a, b) => parseFloat(a) - parseFloat(b),
+    prod: (a, b) => parseFloat(a) * parseFloat(b),
     div: (a, b) => {
-        if(b == 0) 
-        {
+        if (parseFloat(b) === 0) {
+            // Reset operand, operand_2, and operator on division by zero
             operand = "";
             operand_2 = "";
             operator = null;
-
-            return "Math Error";
-            
+            return "Math Error: Division by zero";
         }
 
-        return a / b;
-
-    },
+        return parseFloat(a) / parseFloat(b);
+    }
 };
+
 
 const BTN = {
     dot : () => document.querySelector('#dot'),
