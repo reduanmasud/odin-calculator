@@ -126,6 +126,7 @@ BTN.ac().addEventListener("click", () => {
     operator = null;
     operand = "";
     operand = "";
+    dot_flag = false;
     DISPLAY.innerHTML = 0;
 })
 
