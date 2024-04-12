@@ -46,12 +46,18 @@ function display(element)
     console.log(operator)
     if(operator == null)
     {
-        operand = parseInt(operand) * 10 + parseInt(element);
+        if(operand >= 0)
+            operand = operand * 10 + parseInt(element);
+        else
+            operand = operand * 10 - parseInt(element)
         DISPLAY.innerHTML = operand;
     }
     else 
     {
-        operand_2 = parseInt(operand_2) * 10 + parseInt(element);
+        if(operand_2 >= 0)
+            operand_2 = operand_2 * 10 + parseInt(element);
+        else
+            operand_2 = operand_2 * 10 + parseInt(element);
         DISPLAY.innerHTML = operand_2;
     }
     
@@ -108,4 +114,8 @@ BTN.multiply().addEventListener('click', () => {
 BTN.div().addEventListener('click', () => {
     operator = "/";
     operand_2 = 0;
+})
+BTN.plus_minus().addEventListener('click', () => {
+    operand = parseInt(operand) * -1;
+    DISPLAY.innerHTML = operand;
 })
