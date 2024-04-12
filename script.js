@@ -5,8 +5,9 @@ const CALCULATE = {
     div: (a, b) => (b == 0 ? "ERROE" : a / b),
 };
 
-let operand;
-let operator;
+let operand = 0;
+let operand_2 = 0;
+let operator = null;
 
 const BTN = {
     zero : () => document.querySelector('#zero'),
@@ -34,3 +35,20 @@ const BTN = {
 const DISPLAY = document.querySelector('#calc-typed');
 
 
+function display(element)
+{
+    //operand = element;
+    console.log(element);
+    console.log(operator)
+    if(operator == null)
+    {
+        operand = parseInt(operand) * 10 + parseInt(element);
+        DISPLAY.innerHTML = operand;
+    }
+    else 
+    {
+        operand_2 = parseInt(operand_2) * 10 + parseInt(element);
+        DISPLAY.innerHTML = operand_2;
+    }
+    
+}
