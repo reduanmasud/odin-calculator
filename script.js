@@ -1,7 +1,7 @@
-let operand = 0;
-let operand_2 = 0;
+let operand = "";
+let operand_2 = "";
 let operator = null;
-
+let dot_flag = false;
 
 const CALCULATE = {
     sum: (a, b) => a + b,
@@ -39,27 +39,30 @@ const BTN = {
 const DISPLAY = document.querySelector('#calc-typed');
 
 
+
 function display(element)
 {
-    //operand = element;
-    console.log(element);
-    console.log(operator)
-    if(operator == null)
+    if(element === "." && dot_flag)
     {
-        if(operand >= 0)
-            operand = operand * 10 + parseInt(element);
-        else
-            operand = operand * 10 - parseInt(element)
+        dot_flag = true;
+        return;
+    }
+
+    if(element === ".") dot_flag = true;
+    if(operator === null)
+    {
+        operand += element;
         DISPLAY.innerHTML = operand;
     }
     else 
     {
-        if(operand_2 >= 0)
-            operand_2 = operand_2 * 10 + parseInt(element);
-        else
-            operand_2 = operand_2 * 10 + parseInt(element);
+        operand_2 += element;
         DISPLAY.innerHTML = operand_2;
     }
+}
+
+function clearAll()
+{
     
 }
 
