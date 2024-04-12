@@ -40,6 +40,8 @@ const DISPLAY = document.querySelector('#calc-typed');
 
 function display(element)
 {
+    if(operand.length >= 13) return;
+    if(operand_2.length >= 13) return;
     if(element === "." && dot_flag)
     {
         dot_flag = true;
@@ -105,12 +107,14 @@ BTN.back().addEventListener("click", ()=>{
 
    if(operator === null)
    {
+        if(operand.slice(-1) === ".") dot_flag = false;
         operand = operand.replace(/.$/,'');
         if(operand === "") DISPLAY.innerHTML = 0;
         else DISPLAY.innerHTML = operand;
    }
    else 
    {
+        if(operand_2.slice(-1) === ".") dot_flag = false;
         operand_2 = operand_2.replace(/.$/,'');
         if(operand_2 === "") DISPLAY.innerHTML = 0;
         else DISPLAY.innerHTML = operand_2;

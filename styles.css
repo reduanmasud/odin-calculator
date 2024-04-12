@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'calculator_font';
+    src: url('Open24DisplaySt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*Calculator Body*/
 .calc-body {
     width: 275px;
@@ -17,10 +24,11 @@
     padding-bottom: .5rem;
 }
 #calc-typed {
+    font-family: 'calculator_font';
     font-size: 2rem;
     text-align: right;
     color: #fff;
-    overflow: hidden;
+    letter-spacing: 3px;
 }
 /*Calculator Buttons*/
 .calc-button-row{
