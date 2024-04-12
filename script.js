@@ -10,8 +10,8 @@ const CALCULATE = {
     div: (a, b) => {
         if(b == 0) 
         {
-            operand = 0;
-            operand_2 = 0;
+            operand = "";
+            operand_2 = "";
             operator = null;
 
             return "Math Error";
@@ -125,19 +125,19 @@ BTN.ac().addEventListener("click", () => {
 
 BTN.plus().addEventListener('click', () => {
     operator = "+";
-    operand_2 = 0;
+    operand_2 = "";
 })
 BTN.minus().addEventListener('click', () => {
     operator = "-";
-    operand_2 = 0;
+    operand_2 = "";
 })
 BTN.multiply().addEventListener('click', () => {
     operator = "*";
-    operand_2 = 0;
+    operand_2 = "";
 })
 BTN.div().addEventListener('click', () => {
     operator = "/";
-    operand_2 = 0;
+    operand_2 = "";
 })
 BTN.plus_minus().addEventListener('click', () => {
     if(operator == null)
