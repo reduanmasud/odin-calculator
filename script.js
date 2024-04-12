@@ -23,16 +23,6 @@ const CALCULATE = {
 };
 
 const BTN = {
-    zero : () => document.querySelector('#zero'),
-    one : () => document.querySelector('#one'),
-    two : () => document.querySelector('#two'),
-    three : () => document.querySelector('#three'),
-    four : () => document.querySelector('#four'),
-    five : () => document.querySelector('#five'),
-    six : () => document.querySelector('#six'),
-    seven : () => document.querySelector('#seven'),
-    eight : () => document.querySelector('#eight'),
-    nine : () => document.querySelector('#nine'),
     dot : () => document.querySelector('#dot'),
     back : () => document.querySelector('#back'),
     plus : () => document.querySelector('#plus'),
