@@ -2,7 +2,7 @@
 
 This is a basic calculator built using HTML, CSS, and JavaScript. The calculator allows users to perform simple arithmetic operations such as addition, subtraction, multiplication, and division. It also supports decimal input, percentage calculation, and toggling of positive/negative numbers.
 
-![Calculator Screenshot](calculator-screenshot.png)
+![Calculator Screenshot](image.png)
 
 ## Features
 
