@@ -18,7 +18,7 @@ This is a basic calculator built using HTML, CSS, and JavaScript. The calculator
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/calculator.git
+   git clone https://github.com/reduanmasud/odin-calculator.git
    ```
 
 2. **Open `index.html` in a Web Browser**:
